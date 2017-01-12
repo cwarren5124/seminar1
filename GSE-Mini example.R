@@ -11,5 +11,3 @@ str(prDat)
 #subset
 weeDat <- subset(prDat,poisonFang > 7.5)
 
-#
-

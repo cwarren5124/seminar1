@@ -1,0 +1,32 @@
+---
+title: "Seminar.1b"
+author: "Cassia Warren"
+date: "January 11, 2017"
+output: html_document
+---
+
+# Basic inspections of Data
+
+I want to know how many rows are in my data using r
+
+First here is my data
+```{r start}
+prDat <- read.table("GSE4051_MINI.tsv", header = TRUE, row.names = 1)
+```
+
+Next I subset the data of only rows that have a poisonFang value of greater than 7.5
+```{r sub}
+weeDat <- subset(prDat,poisonFang > 7.5) # observations with poisonFang over 7.5
+
+nrow(weeDat) # number of rows with poisonFang over 7.5
+
+```
+
+Now I want to subset sample 16 and 38 with only the colums of gene expression
+
+``` {r sub2}
+
+new <- prDat[c("Sample_16", "Sample_38"), c("crabHammer", "eggBomb","poisonFang")]
+```
+
+
